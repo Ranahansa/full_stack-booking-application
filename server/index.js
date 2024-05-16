@@ -6,6 +6,7 @@ import users from "./routes/users.js";
 import hotels from "./routes/hotels.js";
 import rooms from "./routes/rooms.js";
 import auth from "./routes/auth.js";
+import cookieParser from "cookie-parser";
 
 
 const app = express();
@@ -14,6 +15,7 @@ const port = process.env.PORT || 8800;
 
 
 //middleware
+app.use(cookieParser());
 app.use(cors());
 app.use(express.json());
 
